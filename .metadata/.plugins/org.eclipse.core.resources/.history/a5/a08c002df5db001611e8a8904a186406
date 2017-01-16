@@ -7,7 +7,7 @@ import domotica.model.Room;
 @SuppressWarnings("serial")
 public abstract class DomoticaException extends Exception {
 	
-	public Room room;
+	protected Room room;
 
 	DomoticaException(Room room) {
 		this(room, null);

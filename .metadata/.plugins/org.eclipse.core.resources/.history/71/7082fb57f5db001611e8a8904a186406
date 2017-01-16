@@ -1,4 +1,5 @@
 package domotica.factory;
+
 import domotica.exceptions.DomoticaException;
 import domotica.exceptions.ElectricityException;
 import domotica.exceptions.FlowLevelException;
@@ -11,34 +12,34 @@ import domotica.model.Room;
 
 public class ExceptionFactory {
 	
-	protected Room room;
+	//protected Room room;
 	public DomoticaException de;
 	
 	public DomoticaException getException(String exception){
 		if(exception == null){
 			return null;
 		}
-		/*if(exception.equalsIgnoreCase("ElectricityException")){
-			return new ElectricityException(room);
+		if(exception.equalsIgnoreCase("ElectricityException")){
+			return new ElectricityException(de.room);
 		}
 		else if(exception.equalsIgnoreCase("GasException")){
-			return new GasException(room);
-		}*/
-		if(exception.equalsIgnoreCase("FlowLevelException")){
-			return new FlowLevelException(room);
+			return new GasException(de.room);
+		}
+		else if(exception.equalsIgnoreCase("FlowLevelException")){
+			return new FlowLevelException(de.room);
 		}
 		else if(exception.equalsIgnoreCase("LightLevelException")){
-			return new LightLevelException(room);
+			return new LightLevelException(de.room);
 		}
 		else if(exception.equalsIgnoreCase("TelevisionException")){
-			return new TelevisionException(room);
+			return new TelevisionException(de.room);
 		}
 		else if(exception.equalsIgnoreCase("TemperatureException")){
-			return new TemperatureException(room);
+			return new TemperatureException(de.room);
 		}
-		/*else if(exception.equalsIgnoreCase("WaterException")){
-			return new WaterException(room);
-		}*/
+		else if(exception.equalsIgnoreCase("WaterException")){
+			return new WaterException(de.room);
+		}
 		
 		return null;
 	}

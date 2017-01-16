@@ -19,6 +19,6 @@ public class TestPattern {
 //			domotica.openHouse();
 		} catch (DomoticaException e) {
 			e.printStackTrace();
-		}
+		}		
 	}
 }

@@ -13,12 +13,11 @@ public class TestPattern {
 		
 		House home = new House("Home");
 		DomoticaFacade domotica = new DomoticaFacade(home);
-		ExceptionFactory ef = new ExceptionFactory();
 		try {
 			domotica.closeHouse();
 //			domotica.openHouse();
 		} catch (DomoticaException e) {
 			e.printStackTrace();
-		}
+		}		
 	}
 }

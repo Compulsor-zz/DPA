@@ -18,7 +18,9 @@ public class TestPattern {
 			domotica.closeHouse();
 //			domotica.openHouse();
 		} catch (DomoticaException e) {
+			DomoticaException de = ef.getException("WaterException");
+			System.out.println(de);
 			e.printStackTrace();
-		}
+		}		
 	}
 }

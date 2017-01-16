@@ -20,5 +20,7 @@ public class TestPattern {
 		} catch (DomoticaException e) {
 			e.printStackTrace();
 		}
+		DomoticaException de = ef.getException("WaterException");
+		System.out.println(de);
 	}
 }
