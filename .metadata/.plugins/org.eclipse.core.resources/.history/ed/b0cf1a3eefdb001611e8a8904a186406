@@ -1,0 +1,11 @@
+package domotica.factory;
+
+public class TestFactory {
+
+	public static void main(String[] args) {
+		
+		ExceptionFactory ef = new ExceptionFactory();
+
+	}
+
+}

@@ -1,0 +1,47 @@
+package domotica.factory;
+
+import domotica.exceptions.DomoticaException;
+import domotica.exceptions.ElectricityException;
+import domotica.exceptions.FlowLevelException;
+import domotica.exceptions.GasException;
+import domotica.exceptions.LightLevelException;
+import domotica.exceptions.TelevisionException;
+import domotica.exceptions.TemperatureException;
+import domotica.exceptions.WaterException;
+import domotica.model.Room;
+
+public class ExceptionFactory {
+	
+	protected Room room;
+	public DomoticaException de;
+	
+	public DomoticaException getException(String exception){
+		if(exception == null){
+			return null;
+		}
+		if(exception.equalsIgnoreCase("ElectricityException")){
+			return new ElectricityException(room);
+		}
+		else if(exception.equalsIgnoreCase("GasException")){
+			return new GasException(room);
+		}
+		else if(exception.equalsIgnoreCase("FlowLevelException")){
+			return new FlowLevelException(room);
+		}
+		else if(exception.equalsIgnoreCase("LightLevelException")){
+			return new LightLevelException(room);
+		}
+		else if(exception.equalsIgnoreCase("TelevisionException")){
+			return new TelevisionException(room);
+		}
+		else if(exception.equalsIgnoreCase("TemperatureException")){
+			return new TemperatureException(room);
+		}
+		else if(exception.equalsIgnoreCase("WaterException")){
+			return new WaterException(room);
+		}
+		
+		return null;
+	}
+
+}

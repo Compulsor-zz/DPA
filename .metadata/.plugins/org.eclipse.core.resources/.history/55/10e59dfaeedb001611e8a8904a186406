@@ -1,0 +1,5 @@
+package domotica.factory;
+
+public class ExceptionFactory {
+
+}

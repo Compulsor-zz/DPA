@@ -1,0 +1,15 @@
+package domotica.factory;
+
+import domotica.exceptions.DomoticaException;
+
+public class TestFactory {
+
+	public static void main(String[] args) {
+		
+		ExceptionFactory ef = new ExceptionFactory();
+		DomoticaException de1 = ef.getException("GasException");
+		System.out.println(de1);
+
+	}
+
+}
