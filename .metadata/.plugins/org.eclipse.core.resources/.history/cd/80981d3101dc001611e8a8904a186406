@@ -7,8 +7,8 @@ public class TestFactory {
 	public static void main(String[] args) {
 		
 		ExceptionFactory ef = new ExceptionFactory();
-		DomoticaException de1 = ef.getException("TemperatureException");
-		DomoticaException de2 = ef.getException("FLOWLEVelEXCEPtioN");
+		DomoticaException de1 = ef.getException("GasException");
+		DomoticaException de2 = ef.getException("TemperatureException");
 		System.out.println(de1);
 		System.out.println(de2);
 
